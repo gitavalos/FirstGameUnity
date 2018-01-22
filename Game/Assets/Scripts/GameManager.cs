@@ -82,7 +82,13 @@ public class GameManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (playerTurn || enemiesMoving || doingSetup)
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        if (playerTurn || enemiesMoving || doingSetup)
         {
             return;
         }
